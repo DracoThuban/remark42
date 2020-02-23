@@ -117,7 +117,7 @@ const (
 		}
 		a {
 			text-decoration: none;
-			color: #0aa;
+			color: #840000;
 		}
 		p {
 			margin: 0 0 12px;
@@ -139,7 +139,7 @@ const (
 				<img src="{{.ParentUserPicture}}" style="width: 24px; height: 24px; display: inline; vertical-align: middle; margin: 0 8px 0 0; border-radius: 3px; background-color: #ccc;"/>
 				<span style="font-size: 14px; font-weight: bold; color: #777">{{.ParentUserName}}</span>
 				<span style="color: #999; font-size: 14px; margin: 0 8px;">{{.ParentCommentDate.Format "02.01.2006 at 15:04"}}</span>
-				<a href="{{.ParentCommentLink}}" style="color: #0aa; font-size: 14px;"><b>Show</b></a>
+				<a href="{{.ParentCommentLink}}" style="color: #840000; font-size: 14px;"><b>Show</b></a>
 			</div>
 			<div style="font-size: 14px; color:#333!important; padding: 0 14px 0 2px; border-radius: 3px; line-height: 1.4;">
 				{{.ParentCommentText}}
@@ -149,7 +149,7 @@ const (
 					<img src="{{.UserPicture}}" style="width: 24px; height: 24px; display:inline; vertical-align:middle; margin: 0 8px 0 0; border-radius: 3px; background-color: #ccc;"/>
 					<span style="font-size: 14px; font-weight: bold; color: #777">{{.UserName}}</span>
 					<span style="color: #999; font-size: 14px; margin: 0 8px;">{{.CommentDate.Format "02.01.2006 at 15:04"}}</span>
-					<a href="{{.CommentLink}}" style="color: #0aa; font-size: 14px;"><b>Reply</b></a>
+					<a href="{{.CommentLink}}" style="color: #840000; font-size: 14px;"><b>Reply</b></a>
 				</div>
 				<div style="font-size: 16px; background-color: #fff; color:#000!important; padding: 14px 14px 2px 14px; border-radius: 3px; line-height: 1.4;">{{.CommentText}}</div>
 			</div>
@@ -157,7 +157,7 @@ const (
 		<div style="text-align: center; font-size: 14px; margin-top: 32px;">
 			<i style="color: #000!important;">Sent to <a style="color:inherit; text-decoration: none" href="mailto:{{.Email}}">{{.Email}}</a> for {{.ParentUserName}}</i>
 			<div style="margin: auto; width: 150px; border-top: 1px solid rgba(0, 0, 0, 0.15); padding-top: 15px; margin-top: 15px;"></div>
-			<a style="color: #0aa;" href="{{.UnsubscribeLink}}">Unsubscribe</a>
+			<a style="color: #840000;" href="{{.UnsubscribeLink}}">Unsubscribe</a>
 			<!-- This is hack for remove collapser in Gmail which can collapse end of the message -->
 			<div style="opacity: 0;font-size: 1;">[{{.CommentDate.Format "02.01.2006 at 15:04"}}]</div>
 		</div>
