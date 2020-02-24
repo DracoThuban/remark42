@@ -13,7 +13,7 @@
 
 .auth-panel-email-login-form__token-input {
   resize: vertical;
-  border: 1px solid #c4c4c4;
+  border: 1px solid #840000;
   padding: 4px;
   font-family: inherit;
   font-size: 0.8em;
@@ -21,8 +21,8 @@
   line-height: 1.5;
 
   &:focus {
-    box-shadow: 0 0 0 2px rgba(37, 156, 154, 0.4);
-    border-color: #259c9a;
+    box-shadow: 0 0 0 2px rgba(200, 51, 51, 0.4);
+    border-color: #840000;
     outline: none;
   }
 }
@@ -56,6 +56,6 @@
 }
 
 .auth-panel-email-login-form_theme_light .auth-panel-email-login-form__error {
-  background: #ffd7d7;
-  color: #9a0000;
+  background: #c83333;
+  color: #fff;
 }
