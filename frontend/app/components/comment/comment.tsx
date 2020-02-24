@@ -211,7 +211,7 @@ export class Comment extends Component<Props, State> {
   onUnblockUserClick = () => {
     const { user } = this.props.data;
 
-    const promptMessage = `Do you want to unblock this user?`;
+    const promptMessage = `¿Quiere desbloquear a este usuario?`;
 
     if (confirm(promptMessage)) {
       this.props.unblockUser!(user.id);
