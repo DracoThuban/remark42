@@ -165,7 +165,7 @@ export class Comment extends Component<Props, State> {
 
   togglePin = () => {
     const value = !this.props.data.pin;
-    const promptMessage = `Do you want to ${value ? 'pin' : 'unpin'} this comment?`;
+    const promptMessage = `Quiere ${value ? 'pin' : 'unpin'} este comentario?`;
 
     if (confirm(promptMessage)) {
       this.props.setPinState!(this.props.data.id, value);
