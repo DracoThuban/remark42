@@ -21,8 +21,7 @@ export const PROVIDER_NAMES: { [P in AuthProvider['name']]: string } = {
   github: 'GitHub',
   yandex: 'Yandex',
   dev: 'Dev',
-  anonymous: 'Anonymous',
-  email: 'Email',
+  anonymous: 'Anónimo',
 };
 
 /** locastorage key for collapsed comments */
