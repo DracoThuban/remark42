@@ -407,7 +407,7 @@ export class Comment extends Component<Props, State> {
     if (!isCurrentUser) {
       controls.push(
         <Button kind="link" {...getHandleClickProps(this.hideUser)} mix="comment__control">
-          Hide
+          Ocultar
         </Button>
       );
     }
