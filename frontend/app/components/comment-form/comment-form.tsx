@@ -1,5 +1,5 @@
 /** @jsx createElement */
-import { createElement, Component, createRef, Fragment } from 'preact';
+import { createElement, Component, createRef } from 'preact';
 import b, { Mix } from 'bem-react-helper';
 
 import { User, Theme, Image, ApiError } from '@app/common/types';
@@ -9,9 +9,6 @@ import { extractErrorMessageFromResponse } from '@app/utils/errorUtils';
 import { sleep } from '@app/utils/sleep';
 import { replaceSelection } from '@app/utils/replaceSelection';
 import { Button } from '@app/components/button';
-
-import { SubscribeByEmail } from './__subscribe-by-email';
-import { SubscribeByRSS } from './__subscribe-by-rss';
 
 import MarkdownToolbar from './markdown-toolbar';
 import TextareaAutosize from './textarea-autosize';
@@ -412,26 +409,6 @@ export class CommentForm extends Component<Props, State> {
           <Button kind="primary" size="large" mix="comment-form__button" type="submit" disabled={isDisabled}>
             {label}
           </Button>
-
-          {!props.simpleView && props.mode === 'main' && (
-            <div className="comment-form__rss">
-              <div className="comment-form__markdown">
-                Styling with{' '}
-                <a className="comment-form__markdown-link" target="_blank" href="markdown-help.html">
-                  Markdown
-                </a>
-                {' is supported'}
-              </div>
-              {'Subscribe by '}
-              <SubscribeByRSS userId={props.user !== null ? props.user.id : null} />
-              {StaticStore.config.email_notifications && (
-                <Fragment>
-                  {' or '}
-                  <SubscribeByEmail />
-                </Fragment>
-              )}
-            </div>
-          )}
         </div>
 
         {// TODO: it can be more elegant;
