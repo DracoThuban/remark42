@@ -356,7 +356,7 @@ export class Comment extends Component<Props, State> {
     if (this.isCurrentUser()) return 'No puede votar por su propio comentario';
     if (StaticStore.config.positive_score && this.props.data.score < 1) return 'Solo puntuación positiva permitida';
     if (this.isGuest()) return 'Inicie sesión para votar';
-    if (this.isAnonymous() && !StaticStore.config.anon_vote) return 'Los usuarios anónimos no pueden votar';
+    if (this.isAnonymous() && !StaticStore.config.anon_vote) return 'Usuarios anónimos no pueden votar';
     return null;
   };
 
@@ -366,7 +366,7 @@ export class Comment extends Component<Props, State> {
   getUpvoteDisabledReason = (): string | null => {
     if (!(this.props.view === 'main' || this.props.view === 'pinned'))
       return 'La votación solo está permitida en la página de la publicación';
-    if (this.props.post_info!.read_only) return 'No puede votar sobre temas de solo lectura';
+    if (this.props.post_info!.read_only) return 'No puede votar en temas de solo lectura';
     if (this.props.data.delete) return 'No puede votar por el comentario eliminado';
     if (this.isCurrentUser()) return 'No puede votar por su propio comentario';
     if (this.isGuest()) return 'Inicie sesión para votar';
