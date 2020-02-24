@@ -227,7 +227,7 @@ export class Comment extends Component<Props, State> {
   };
 
   hideUser = () => {
-    if (!confirm(`Do you want to hide comments of ${this.props.data.user.name}?`)) return;
+    if (!confirm(`¿Quiere ocultar comentarios de ${this.props.data.user.name}?`)) return;
     this.props.hideUser!(this.props.data.user);
   };
 
