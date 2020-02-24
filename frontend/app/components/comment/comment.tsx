@@ -634,7 +634,7 @@ export class Comment extends Component<Props, State> {
               {...getHandleClickProps(isUpvotingDisabled ? undefined : this.increaseScore)}
               title={upvotingDisabledReason || undefined}
             >
-              Vote up
+              Votar positivo
             </span>
 
             <span className="comment__score-value" title={o.controversyText}>
@@ -652,7 +652,7 @@ export class Comment extends Component<Props, State> {
               {...getHandleClickProps(isDownvotingDisabled ? undefined : this.decreaseScore)}
               title={downvotingDisabledReason || undefined}
             >
-              Vote down
+              Votar negativo
             </span>
           </span>
         </div>
@@ -774,5 +774,5 @@ function formatTime(time: Date) {
   const hours = `0${time.getHours()}`.slice(-2);
   const mins = `0${time.getMinutes()}`.slice(-2);
 
-  return `${date} at ${hours}:${mins}`;
+  return `${date} @ ${hours}:${mins}`;
 }
