@@ -348,13 +348,14 @@ export class Comment extends Component<Props, State> {
    * returns reason for disabled downvoting
    */
   getDownvoteDisabledReason = (): string | null => {
-    if (!(this.props.view === 'main' || this.props.view === 'pinned')) return "Voting allowed only on post's page";
-    if (this.props.post_info!.read_only) return "Can't vote on read-only topics";
-    if (this.props.data.delete) return "Can't vote for deleted comment";
-    if (this.isCurrentUser()) return "Can't vote for your own comment";
-    if (StaticStore.config.positive_score && this.props.data.score < 1) return 'Only positive score allowed';
-    if (this.isGuest()) return 'Sign in to vote';
-    if (this.isAnonymous() && !StaticStore.config.anon_vote) return "Anonymous users can't vote";
+    if (!(this.props.view === 'main' || this.props.view === 'pinned'))
+      return 'La votación solo está permitida en la página de la publicación';
+    if (this.props.post_info!.read_only) return 'No puede votar en temas de solo lectura';
+    if (this.props.data.delete) return 'No puede votar por el comentario eliminado';
+    if (this.isCurrentUser()) return 'No puede votar por su propio comentario';
+    if (StaticStore.config.positive_score && this.props.data.score < 1) return 'Solo puntuación positiva permitida';
+    if (this.isGuest()) return 'Inicie sesión para votar';
+    if (this.isAnonymous() && !StaticStore.config.anon_vote) return 'Los usuarios anónimos no pueden votar';
     return null;
   };
 
