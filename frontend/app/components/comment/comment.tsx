@@ -219,7 +219,7 @@ export class Comment extends Component<Props, State> {
   };
 
   deleteComment = () => {
-    if (confirm('Do you want to delete this comment?')) {
+    if (confirm('¿Quiere borrar este comentario?')) {
       this.props.setReplyEditState!({ id: this.props.data.id, state: CommentMode.None });
 
       this.props.removeComment!(this.props.data.id);
