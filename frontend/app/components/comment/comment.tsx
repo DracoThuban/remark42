@@ -471,7 +471,7 @@ export class Comment extends Component<Props, State> {
      */
     const o = {
       ...props.data,
-      controversyText: `Controversy: ${(props.data.controversy || 0).toFixed(2)}`,
+      controversyText: `Controversia: ${(props.data.controversy || 0).toFixed(2)}`,
       text:
         props.view === 'preview'
           ? getTextSnippet(props.data.text)
