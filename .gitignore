@@ -25,3 +25,4 @@ compose-private-frontend.yml
 compose-private.yml
 /backend/_example/*/vendor
 remark42.code-workspace
+*.rej
