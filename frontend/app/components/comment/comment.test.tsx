@@ -42,7 +42,7 @@ describe('<Comment />', () => {
 
       voteButtons.forEach(button => {
         expect(button.prop('aria-disabled')).toEqual('true');
-        expect(button.prop('title')).toEqual("Anonymous users can't vote");
+        expect(button.prop('title')).toEqual('Usuarios anónimos no pueden votar');
       });
     });
 
@@ -68,7 +68,9 @@ describe('<Comment />', () => {
 
       voteButtons.forEach(b => {
         expect(b.getDOMNode().getAttribute('aria-disabled')).toStrictEqual('true');
-        expect(b.getDOMNode().getAttribute('title')).toStrictEqual("Voting allowed only on post's page");
+        expect(b.getDOMNode().getAttribute('title')).toStrictEqual(
+          'La votación solo está permitida en la página de la publicación'
+        );
       });
     });
 
@@ -82,7 +84,7 @@ describe('<Comment />', () => {
 
       voteButtons.forEach(b => {
         expect(b.getDOMNode().getAttribute('aria-disabled')).toStrictEqual('true');
-        expect(b.getDOMNode().getAttribute('title')).toStrictEqual("Can't vote on read-only topics");
+        expect(b.getDOMNode().getAttribute('title')).toStrictEqual('No puede votar en temas de solo lectura');
       });
     });
 
@@ -97,7 +99,7 @@ describe('<Comment />', () => {
 
       voteButtons.forEach(b => {
         expect(b.getDOMNode().getAttribute('aria-disabled')).toStrictEqual('true');
-        expect(b.getDOMNode().getAttribute('title')).toStrictEqual("Can't vote for deleted comment");
+        expect(b.getDOMNode().getAttribute('title')).toStrictEqual('No puede votar por el comentario eliminado');
       });
     });
 
@@ -119,7 +121,7 @@ describe('<Comment />', () => {
 
       voteButtons.forEach(b => {
         expect(b.getDOMNode().getAttribute('aria-disabled')).toStrictEqual('true');
-        expect(b.getDOMNode().getAttribute('title')).toStrictEqual("Can't vote for your own comment");
+        expect(b.getDOMNode().getAttribute('title')).toStrictEqual('No puede votar por su propio comentario');
       });
     });
 
@@ -131,7 +133,7 @@ describe('<Comment />', () => {
 
       voteButtons.forEach(b => {
         expect(b.getDOMNode().getAttribute('aria-disabled')).toStrictEqual('true');
-        expect(b.getDOMNode().getAttribute('title')).toStrictEqual('Sign in to vote');
+        expect(b.getDOMNode().getAttribute('title')).toStrictEqual('Inicie sesión para votar');
       });
     });
 
@@ -213,11 +215,11 @@ describe('<Comment />', () => {
       const controls = element.find('.comment__controls').children();
 
       expect(controls.length).toBe(5);
-      expect(controls.at(0).text()).toEqual('Copy');
+      expect(controls.at(0).text()).toEqual('Copiar');
       expect(controls.at(1).text()).toEqual('Pin');
-      expect(controls.at(2).text()).toEqual('Hide');
+      expect(controls.at(2).text()).toEqual('Ocultar');
       expect(controls.at(3).getDOMNode().childNodes[0].textContent).toEqual('Block');
-      expect(controls.at(4).text()).toEqual('Delete');
+      expect(controls.at(4).text()).toEqual('Borrar');
     });
 
     it('for regular user it shows only "hide"', () => {
@@ -227,7 +229,7 @@ describe('<Comment />', () => {
 
       const controls = element.find('.comment__controls').children();
       expect(controls.length).toBe(1);
-      expect(controls.at(0).text()).toEqual('Hide');
+      expect(controls.at(0).text()).toEqual('Ocultar');
     });
 
     it('verification badge clickable for admin', () => {
