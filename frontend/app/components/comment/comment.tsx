@@ -175,7 +175,7 @@ export class Comment extends Component<Props, State> {
   toggleVerify = () => {
     const value = !this.props.data.user.verified;
     const userId = this.props.data.user.id;
-    const promptMessage = `Do you want to ${value ? 'verify' : 'unverify'} ${this.props.data.user.name}?`;
+    const promptMessage = `Quiere ${value ? 'verify' : 'unverify'} ${this.props.data.user.name}?`;
 
     if (confirm(promptMessage)) {
       this.props.setVerifyStatus!(userId, value);
