@@ -392,7 +392,7 @@ export class Comment extends Component<Props, State> {
           <span className="comment__control comment__control_view_inactive">Copied!</span>
         ) : (
           <Button kind="link" {...getHandleClickProps(this.copyComment)} mix="comment__control">
-            Copy
+            Copiar
           </Button>
         )
       );
