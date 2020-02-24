@@ -441,7 +441,7 @@ export class Comment extends Component<Props, State> {
       if (!this.props.data.delete) {
         controls.push(
           <Button kind="link" {...getHandleClickProps(this.deleteComment)} mix="comment__control">
-            Delete
+            Borrar
           </Button>
         );
       }
