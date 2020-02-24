@@ -1,12 +1,15 @@
 .button_kind_primary {
-  background: #259c9a;
-  color: #fff;
+  background: transparent;
+  color: #222;
+  border: 1px solid #840000;
 
   &:hover {
-    background: #06c5c5;
+    color: #fff;
+    background: #840000;
   }
 
   &:hover:disabled {
-    background: #259c9a;
+    color: #000;
+    background: #efefef;
   }
 }
