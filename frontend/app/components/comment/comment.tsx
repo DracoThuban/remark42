@@ -416,7 +416,7 @@ export class Comment extends Component<Props, State> {
       if (this.props.isUserBanned) {
         controls.push(
           <Button kind="link" {...getHandleClickProps(this.onUnblockUserClick)} mix="comment__control">
-            Unblock
+            Desbloquear
           </Button>
         );
       }
