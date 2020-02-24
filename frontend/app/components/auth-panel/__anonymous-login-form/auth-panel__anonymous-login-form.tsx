@@ -51,7 +51,7 @@ export class AnonymousLoginForm extends Component<Props, State> {
 
   getUsernameInvalidReason(): string | null {
     const value = this.state.inputValue;
-    if (value.length < 3) return 'Username must be at least 3 characters long';
+    if (value.length < 3) return 'El nombre de usuario debe tener al menos 3 caracteres';
     if (!AnonymousLoginForm.usernameRegex.test(value))
       return 'Username must start from the letter and contain only latin letters, numbers, underscores, and spaces';
     return null;
@@ -82,7 +82,7 @@ export class AnonymousLoginForm extends Component<Props, State> {
         <Input
           ref={this.inputRef}
           mix="auth-panel-anonymous-login-form__input"
-          placeholder="Username"
+          placeholder="Nombre de usuario"
           value={this.state.inputValue}
           onInput={this.onChange}
         />
@@ -103,7 +103,7 @@ export class AnonymousLoginForm extends Component<Props, State> {
           title={usernameInvalidReason || ''}
           disabled={usernameInvalidReason !== null}
         >
-          Log in
+          Iniciar sesión
         </Button>
       </form>
     );

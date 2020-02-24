@@ -155,7 +155,7 @@ export class AuthPanel extends Component<Props, State> {
 
     return (
       <div className="auth-panel__column">
-        You logged in as{' '}
+        Ha iniciado sesión como{' '}
         <Dropdown title={user.name} titleClass="auth-panel__user-dropdown-title" theme={theme}>
           <DropdownItem separator={!isUserAnonymous}>
             <div
@@ -170,13 +170,13 @@ export class AuthPanel extends Component<Props, State> {
           {!isUserAnonymous && (
             <DropdownItem>
               <Button theme={theme} onClick={() => requestDeletion().then(onSignOut)}>
-                Request my data removal
+                Solicitar eliminación de mis datos
               </Button>
             </DropdownItem>
           )}
         </Dropdown>{' '}
         <Button kind="link" theme={theme} onClick={onSignOut}>
-          Logout?
+          ¿Cerrar sesión?
         </Button>
       </div>
     );
@@ -263,7 +263,7 @@ export class AuthPanel extends Component<Props, State> {
 
     return (
       <div className="auth-panel__column">
-        {'Login: '}
+        {'Iniciar sesión: '}
         {!isAboveThreshold &&
           sortedProviders.map((provider, i) => {
             const comma = i === 0 ? '' : i === sortedProviders.length - 1 ? ' or ' : ', ';
@@ -288,7 +288,7 @@ export class AuthPanel extends Component<Props, State> {
           })}
         {isAboveThreshold && (
           <span>
-            {' or '}
+            {' o '}
             {this.renderOther(sortedProviders.slice(threshold - 1))}
           </span>
         )}
@@ -350,7 +350,7 @@ export class AuthPanel extends Component<Props, State> {
     const sortArray = getSortArray(sort);
     return (
       <span className="auth-panel__sort">
-        Sort by{' '}
+        Ordenado por{' '}
         <span className="auth-panel__select-label">
           <span className={b('auth-panel__select-label-value', {}, { focused: sortSelectFocused })}>
             {sortArray.find(x => 'selected' in x && x.selected!)!.label}
@@ -413,35 +413,35 @@ function getSortArray(currentSort: Sorting) {
   }[] = [
     {
       value: '-score',
-      label: 'Best',
+      label: 'Mejor',
     },
     {
       value: '+score',
-      label: 'Worst',
+      label: 'Peor',
     },
     {
       value: '-time',
-      label: 'Newest',
+      label: 'Más nuevo',
     },
     {
       value: '+time',
-      label: 'Oldest',
+      label: 'Más antiguo',
     },
     {
       value: '-active',
-      label: 'Recently updated',
+      label: 'Actualizado recientemente',
     },
     {
       value: '+active',
-      label: 'Least recently updated',
+      label: 'Actualizado menos recientemente',
     },
     {
       value: '-controversy',
-      label: 'Most controversial',
+      label: 'Más controversial',
     },
     {
       value: '+controversy',
-      label: 'Least controversial',
+      label: 'Menos controversial',
     },
   ];
 

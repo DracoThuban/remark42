@@ -140,17 +140,17 @@ export class EmailLoginForm extends Component<Props, State> {
   };
 
   getForm1InvalidReason(): string | null {
-    if (this.state.loading) return 'Loading...';
+    if (this.state.loading) return 'Cargando...';
     const username = this.state.usernameValue;
-    if (username.length < 3) return 'Username must be at least 3 characters long';
+    if (username.length < 3) return 'El nombre de usuario debe tener al menos 3 caracteres';
     if (!EmailLoginForm.usernameRegex.test(username))
-      return 'Username must start from the letter and contain only latin letters, numbers, underscores, and spaces';
+      return 'El nombre de usuario debe comenzar con una letra y contener solo letras latinas, números, guiones bajos y espacios';
     if (!EmailLoginForm.emailRegex.test(this.state.addressValue)) return 'Address should be valid email address';
     return null;
   }
 
   getForm2InvalidReason(): string | null {
-    if (this.state.loading) return 'Loading...';
+    if (this.state.loading) return 'Cargando...';
     if (this.state.tokenValue.length === 0) return 'Token field must not be empty';
     return null;
   }

@@ -26,15 +26,15 @@ interface FileInputEvent extends Event {
   readonly currentTarget: FileEventTarget | null;
 }
 
-const boldLabel = 'Add bold text <cmd-b>';
-const headerLabel = 'Add header text';
-const italicLabel = 'Add italic text <cmd-i>';
-const quoteLabel = 'Insert a quote';
-const codeLabel = 'Insert a code';
-const linkLabel = 'Add a link <cmd-k>';
-const unorderedListLabel = 'Add a bulleted list';
-const orderedListLabel = 'Add a numbered list';
-const attachImageLabel = 'Attach the image, drag & drop or paste from clipboard';
+const boldLabel = 'Añadir texto en negrita <cmd-b>';
+const headerLabel = 'Agregar texto de encabezado';
+const italicLabel = 'Agregar texto en cursiva <cmd-i>';
+const quoteLabel = 'Insertar cita';
+const codeLabel = 'Insertar un código';
+const linkLabel = 'Agregar un enlace <cmd-k>';
+const unorderedListLabel = 'Agregar una lista con viñetas';
+const orderedListLabel = 'Agregar una lista numerada';
+const attachImageLabel = 'Adjunte la imagen, arrastre y suelte o pegue desde el portapapeles';
 
 export default class MarkdownToolbar extends Component<Props> {
   constructor(props: Props) {

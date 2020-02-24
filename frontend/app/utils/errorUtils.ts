@@ -3,34 +3,34 @@
  * to client readable version
  */
 const errorMessageForCodes = new Map([
-  [0, 'Something went wrong. Please try again a bit later.'],
-  [1, 'Comment cannot be found. Please refresh the page and try again.'],
-  [2, 'Failed to unmarshal incoming request.'],
-  [3, "You don't have permission for this operaton."],
-  [4, 'Invalid comment data.'],
-  [5, 'Comment cannot be found.  Please refresh the page and try again.'],
-  [6, 'Site cannot be found.  Please refresh the page and try again.'],
-  [7, 'User has been blocked.'],
-  [8, 'This post is read only.'],
-  [9, 'Comment changing failed. Please try again a bit later.'],
-  [10, 'It is too late to edit the comment.'],
-  [11, 'Comment already has reply, editing is not possible.'],
-  [12, 'Cannot save voting result. Please try again a bit later.'],
-  [13, 'You cannot vote for your own comment.'],
-  [14, 'You have already voted for the comment.'],
-  [15, 'Too many votes for the comment.'],
-  [16, 'Min score reached for the comment.'],
-  [17, 'Action rejected. Please try again a bit later.'],
-  [18, 'Requested file cannot be found.'],
+  [0, 'Algo salió mal. Por favor intente nuevamente un poco más tarde.'],
+  [1, 'El comentario no se puede encontrar. Actualice la página e intente nuevamente.'],
+  [2, 'No se pudo ordenar la solicitud entrante.'],
+  [3, 'No tiene permiso para esta operación.'],
+  [4, 'Datos de comentario inválidos'],
+  [5, 'El comentario no se puede encontrar. Actualice la página e intente nuevamente.'],
+  [6, 'El sitio no se puede encontrar. Actualice la página e intente nuevamente.'],
+  [7, 'El usuario ha sido bloqueado.'],
+  [8, 'Esta publicación es de solo lectura.'],
+  [9, 'El cambio de comentario falló. Por favor intente nuevamente un poco más tarde.'],
+  [10, 'Es muy tarde para editar el comentario.'],
+  [11, 'El comentario ya tiene respuesta, la edición no es posible.'],
+  [12, 'No se puede guardar el resultado de la votación. Por favor intente nuevamente un poco más tarde.'],
+  [13, 'No puede votar por su propio comentario.'],
+  [14, 'Ya ha votado por el comentario.'],
+  [15, 'Demasiados votos para el comentario.'],
+  [16, 'Puntaje mínimo alcanzado para el comentario.'],
+  [17, 'Acción rechazada. Por favor intente nuevamente un poco más tarde.'],
+  [18, 'No se puede encontrar el archivo solicitado.'],
 ]);
 
 /**
  * map of http rest codes to ui label, used by fetcher to generate error with `-1` code
  */
 export const httpErrorMap = new Map([
-  [401, 'Not authorized.'],
-  [403, 'Forbidden.'],
-  [429, 'You have reached maximum request limit.'],
+  [401, 'No autorizado.'],
+  [403, 'Prohibido.'],
+  [429, 'Has alcanzado el límite de solicitud máximo.'],
 ]);
 
 export type FetcherError =

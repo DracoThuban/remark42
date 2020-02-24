@@ -60,7 +60,7 @@ class UserInfo extends Component<Props, State> {
     return (
       <div className={b('user-info', {})}>
         <AvatarIcon mix="user-info__avatar" picture={user.picture} />
-        <p className="user-info__title">Last comments by {user.name}</p>
+        <p className="user-info__title">Últimos comentarios de {user.name}</p>
         <p className="user-info__id">{user.id}</p>
 
         {!!comments && <LastCommentsList isLoading={isLoading} comments={comments} />}

@@ -52,9 +52,9 @@ interface State {
 }
 
 const Labels = {
-  main: 'Send',
-  edit: 'Save',
-  reply: 'Reply',
+  main: 'Enviar',
+  edit: 'Guardar',
+  reply: 'Responder',
 };
 
 const ImageMimeRegex = /image\//i;
@@ -376,7 +376,7 @@ export class CommentForm extends Component<Props, State> {
               onPaste={this.onPaste}
               ref={this.textAreaRef}
               className="comment-form__field"
-              placeholder="Your comment here"
+              placeholder="Su comentario aquí"
               value={text}
               maxLength={maxLength}
               onInput={this.onInput}
@@ -390,7 +390,7 @@ export class CommentForm extends Component<Props, State> {
         </div>
 
         {(isErrorShown || !!errorMessage) &&
-          (errorMessage || 'Something went wrong. Please try again a bit later.').split('\n').map(e => (
+          (errorMessage || 'Algo salió mal. Por favor intente nuevamente un poco más tarde.').split('\n').map(e => (
             <p className="comment-form__error" role="alert" key={e}>
               {e}
             </p>
@@ -406,7 +406,7 @@ export class CommentForm extends Component<Props, State> {
               disabled={isDisabled}
               onClick={this.getPreview}
             >
-              Preview
+              Vista previa
             </Button>
           )}
           <Button kind="primary" size="large" mix="comment-form__button" type="submit" disabled={isDisabled}>
