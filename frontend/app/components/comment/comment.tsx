@@ -678,7 +678,7 @@ export class Comment extends Component<Props, State> {
             <div className="comment__actions">
               {!props.data.delete && !props.isCommentsDisabled && !props.disabled && !isGuest && props.view === 'main' && (
                 <Button kind="link" {...getHandleClickProps(this.toggleReplying)} mix="comment__action">
-                  {isReplying ? 'Cancel' : 'Reply'}
+                  {isReplying ? 'Cancelar' : 'Responder'}
                 </Button>
               )}
               {!props.data.delete &&
@@ -692,7 +692,7 @@ export class Comment extends Component<Props, State> {
                     {...getHandleClickProps(this.toggleEditing)}
                     mix={['comment__action', 'comment__action_type_edit']}
                   >
-                    {isEditing ? 'Cancel' : 'Edit'}
+                    {isEditing ? 'Cancelar' : 'Editar'}
                   </Button>,
                   !isAdmin && (
                     <Button
