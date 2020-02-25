@@ -479,7 +479,7 @@ export class Comment extends Component<Props, State> {
         props.view === 'preview'
           ? getTextSnippet(props.data.text)
           : props.data.delete
-          ? 'This comment was deleted'
+          ? 'Este comentario fue borrado'
           : props.data.text,
       time: formatTime(new Date(props.data.time)),
       orig: isEditing
