@@ -275,7 +275,7 @@ export class Comment extends Component<Props, State> {
   };
 
   addComment = async (text: string, title: string, pid?: CommentType['id']) => {
-    await this.props.addComment!(text, title, pid);
+    await this.props.addComment!(text, title.replace(' - Draco X press', ''), pid);
 
     this.props.setReplyEditState!({ id: this.props.data.id, state: CommentMode.None });
   };
