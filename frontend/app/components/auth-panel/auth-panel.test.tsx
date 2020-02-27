@@ -142,7 +142,7 @@ describe('<AuthPanel />', () => {
 
       const userInfo = authPanelColumn.first();
 
-      expect(userInfo.text()).toEqual(expect.stringContaining('You logged in as John'));
+      expect(userInfo.text()).toEqual(expect.stringContaining('Ha iniciado sesión como John'));
     });
   });
   describe('For admin user', () => {
