@@ -390,7 +390,7 @@ export class Comment extends Component<Props, State> {
     if (isAdmin) {
       controls.push(
         this.state.isCopied ? (
-          <span className="comment__control comment__control_view_inactive">Copied!</span>
+          <span className="comment__control comment__control_view_inactive">¡Copiado!</span>
         ) : (
           <Button kind="link" {...getHandleClickProps(this.copyComment)} mix="comment__control">
             Copiar
