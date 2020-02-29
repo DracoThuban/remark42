@@ -528,6 +528,7 @@ export class Comment extends Component<Props, State> {
           <div className="comment__body">
             {!!o.title && (
               <div className="comment__title">
+                <AvatarIcon mix="comment__avatar" theme={this.props.theme} picture={o.user.picture} />
                 <a className="comment__title-link" href={`${o.locator.url}#${COMMENT_NODE_CLASSNAME_PREFIX}${o.id}`}>
                   {o.title}
                 </a>
