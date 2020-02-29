@@ -650,7 +650,7 @@ var msgTemplate = `
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-<div style="text-align: center; font-family: Arial, sans-serif; font-size: 18px;">
+<div style="text-align: center; font-family: "Raleway", sans-serif; font-size: 18px;">
 	<h1 style="position: relative; color: #4fbbd6; margin-top: 0.2em;">Remark42</h1>
 	<p style="position: relative; max-width: 20em; margin: 0 auto 1em auto; line-height: 1.4em;">Confirmation for <b>{{.User}}</b> on site <b>{{.Site}}</b></p>
 	<div style="background-color: #eee; max-width: 20em; margin: 0 auto; border-radius: 0.4em; padding: 0.5em;">
