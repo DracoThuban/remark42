@@ -275,7 +275,7 @@ export class Comment extends Component<Props, State> {
   };
 
   addComment = async (text: string, title: string, pid?: CommentType['id']) => {
-    await this.props.addComment!(text, title.replace(' - Draco X press', ''), pid);
+    await this.props.addComment!(text, title, pid);
 
     this.props.setReplyEditState!({ id: this.props.data.id, state: CommentMode.None });
   };
@@ -728,7 +728,7 @@ export class Comment extends Component<Props, State> {
             value=""
             mode="reply"
             mix="comment__input"
-            onSubmit={(text, title) => this.addComment(text, title, o.id)}
+            onSubmit={(text, title) => this.addComment(text, title.replace(' - Draco X Press', ''), o.id)}
             onCancel={this.toggleReplying}
             getPreview={this.props.getPreview!}
             autofocus={true}

@@ -247,7 +247,7 @@ export class Root extends Component<Props, State> {
                   mix="root__input"
                   mode="main"
                   user={props.user}
-                  onSubmit={(text, title) => this.props.addComment(text, title)}
+                  onSubmit={(text, title) => this.props.addComment(text, title.replace(' - Draco X Press', ''))}
                   getPreview={this.props.getPreview}
                   uploadImage={imageUploadHandler}
                   simpleView={StaticStore.config.simple_view}
