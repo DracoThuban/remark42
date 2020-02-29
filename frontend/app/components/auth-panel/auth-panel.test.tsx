@@ -30,7 +30,7 @@ describe('<AuthPanel />', () => {
 
       const authForm = authPanelColumn.first();
 
-      expect(authForm.text()).toEqual(expect.stringContaining('Login:'));
+      expect(authForm.text()).toEqual(expect.stringContaining('Iniciar sesión:'));
 
       const providerLinks = authForm.find(Button);
 
@@ -95,7 +95,7 @@ describe('<AuthPanel />', () => {
 
       const authForm = authPanelColumn.first();
 
-      expect(authForm.text()).toEqual(expect.stringContaining('Login: Google or GitHub'));
+      expect(authForm.text()).toEqual(expect.stringContaining('Iniciar sesión: Google or GitHub'));
 
       const providerLinks = authForm.find(Button);
 

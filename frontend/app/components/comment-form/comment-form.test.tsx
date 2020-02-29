@@ -32,7 +32,7 @@ describe('<CommentForm />', () => {
     const props = { ...DEFAULT_PROPS, user };
     const wrapper = shallow(<CommentForm {...props} />);
 
-    expect(wrapper.exists(SubscribeByEmail)).toEqual(true);
+    expect(wrapper.exists(SubscribeByEmail)).toEqual(false);
   });
 
   it('should be rendered without email subscription button when email_notifications disabled', () => {

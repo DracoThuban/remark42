@@ -57,8 +57,8 @@ describe('fetcher', () => {
         })
         .catch(e => {
           expect(e.code).toBe(-1);
-          expect(e.error).toBe('Not authorized.');
-          expect(e.details).toBe('Not authorized.');
+          expect(e.error).toBe('No autorizado.');
+          expect(e.details).toBe('No autorizado.');
         });
     });
     it('should throw "Something went wrong." object on unknown status', async () => {
